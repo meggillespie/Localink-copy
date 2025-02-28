@@ -1,7 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-native",
     "strict": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",
+    "skipLibCheck": true,
     "paths": {
       "@/*": [
         "./*"
@@ -13,5 +24,21 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
+//{
+//  "compilerOptions": {
+//    "target": "esnext",
+//    "module": "esnext",
+//    "lib": ["dom", "dom.iterable", "esnext"],
+//    "jsx": "react-native",
+//    "strict": true,
+//    "noImplicitAny": true,
+//    "esModuleInterop": true,
+//    "skipLibCheck": true,
+//    "forceConsistentCasingInFileNames": true
+//  },
+//  "include": ["**/*.ts", "**/*.tsx"],
+//  "exclude": ["node_modules"]
+//}
